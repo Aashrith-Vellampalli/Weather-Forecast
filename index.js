@@ -73,7 +73,7 @@ function UpdateforecastweatherData(){
         element = document.getElementById('Wi'+i);
         element.src = data.forecast.forecastday[i].day.condition.icon;
         element = document.getElementById('cor'+i);
-        element.textContent = 'chances of rain: ' + data.forecast.forecastday[i].day.daily_chance_of_rain + '%';
+        element.textContent = 'rain probability: ' + data.forecast.forecastday[i].day.daily_chance_of_rain + '%';
       }
       })
       .catch(error => {
