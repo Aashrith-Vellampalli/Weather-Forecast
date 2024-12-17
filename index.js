@@ -28,7 +28,7 @@ searchButton.addEventListener('click', function() {
 
 
 function updateWeatherData() {
-  var url = 'https://api.weatherapi.com/v1/current.json?key=94def430442c47ffbb8164131241312&q=' + getCityFromSearchBar() + '&aqi=no';
+  var url = 'https://api.weatherapi.com/v1/forecast.json?key=94def430442c47ffbb8164131241312&q='+getCityFromSearchBar()+'&days=7&aqi=no&alerts=no'
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -79,7 +79,6 @@ function UpdateforecastweatherData(){
       .catch(error => {
         console.error('Error:', error);
       });
-
 
 
 }
