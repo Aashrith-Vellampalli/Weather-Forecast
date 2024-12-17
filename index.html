@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyScope</title>
+  <link rel="icon" href="photos/ss-monogram-logotypographic-icon-double-260nw-1576833280.jpg">
+  <link rel="stylesheet" href="index.css">
+</head> 
+<body>
+  <!-- respnosive navbar  -->
+  <nav>
+    <ul class="sidebar">
+      <li onclick="closeSidebar()"><a><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li><a href="#search-box">Search</a></li>
+      <li><a href="#Weather-Data">Weather Data</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="#"class="C-Name">SkyScope</a></li>
+      <li class="hideonmobile"><a href="#">Search</a></li>
+      <li class="hideonmobile"><a href="#Weather-Data">Weather Data</a></li>
+      <li class="hideonmobile"><a href="#About">About</a></li>
+      <li class="hideonmobile"><a href="#footer">Contact</a></li>
+      <li onclick="showSidebar()" class="menu-button"><a><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+  <!-- search bar and intro text -->
+  <div class="search-box" id="search-box">
+    <input type="text" placeholder="Enter City Name" id="search-bar">
+    <button class="search-icon" id="search-icon"><svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#8fe0ff" class="search"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></button>
+  </div>
+  <div class="search-msg">
+    <div>
+      <p class="search-text">
+        Welcome to SkyScope! Enter the name of your city to get real-time weather updates.<br> Our tool provides accurate and up-to-date information on temperature,<br>humidity, wind speed, and more, helping you stay prepared for the day ahead.<br>Simply type your city name and hit 'Search' to see the weather details instantly!<br>Stay informed, stay safe!
+      </p>
+    </div>
+    <div class="hideonmobile">
+      <svg xmlns="http://www.w3.org/2000/svg" height="150px" viewBox="0 -960 960 960" width="150px" fill="grey"><path d="M260-160q-91 0-155.5-63T40-377q0-78 47-139t123-78q25-92 100-149t170-57q117 0 198.5 81.5T760-520q69 8 114.5 59.5T920-340q0 75-52.5 127.5T740-160H260Zm0-80h480q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-83-58.5-141.5T480-720q-83 0-141.5 58.5T280-520h-20q-58 0-99 41t-41 99q0 58 41 99t99 41Zm220-240Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="150px" viewBox="0 -960 960 960" width="150px" fill="orange"><path d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="150px" viewBox="0 -960 960 960" width="150px" fill="	#ADD8E6"><path d="m462 0 94-107-80-40 116-133h106l-94 107 80 40L568 0H462ZM222 0l94-107-80-40 116-133h106l-94 107 80 40L328 0H222Zm78-320q-91 0-155.5-64.5T80-540q0-83 55-145t136-73q32-57 87.5-89.5T480-880q90 0 156.5 57.5T717-679q69 6 116 57t47 122q0 75-52.5 127.5T700-320H300Zm0-80h400q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-40q0-66-47-113t-113-47q-48 0-87.5 26T333-704l-10 24h-25q-57 2-97.5 42.5T160-540q0 58 41 99t99 41Zm180-200Z"/></svg>
+    </div>
+  </div>
+<!-- weather data -->
+    <h1 id="Weather-Data">Weather Data</h1>
+    <div class="card-container">
+      <div class="card">
+          <h2 id="city-name">City-Name</h2>
+          <h3 id="date">date</h3>
+        
+      </div>
+      <div class="card">
+          <h2 id="temperature">Temperature</h2>
+          <h2 id="weatherdesc">WeatherDescription</h2>
+          <img id="weather-icon" class="weather-icon">
+      </div>
+      <div class="card">
+        <h2 id="humidity">Humidity</h2>
+        <h2 id="winds">Wind Speed</h2>
+      </div>
+
+      <div class="card">
+        <h2 id="precipitation">Precipitation</h2>
+        <h2 id="atp">Pressure</h2>
+      </div>
+    </div>
+    <!-- weeks forecast -->
+    <h1>This Week</h1>
+    <div class="weekly-container">
+      <div class="card">
+          <h2 id="date1">date</h2>
+          <h2 id="temperature1">Temperature</h2>
+          <h2 id="Wd1">WeatherDescription</h2>
+          <img id="Wi1">
+          <h2 id="cor1">chances of rain</h2>
+      </div>
+      
+      <div class="card">
+        <h2 id="date2">date</h2>
+        <h2 id="temperature2">Temperature</h2>
+        <h2 id="Wd2">WeatherDescription</h2>
+        <img id="Wi2">
+        <h2 id="cor2">chances of rain</h2>
+        
+      </div>
+
+      <div class="card">
+        <h2 id="date3">date</h2>
+        <h2 id="temperature3">Temperature</h2>
+        <h2 id="Wd3">WeatherDescription</h2>
+        <img id="Wi3">
+        <h2 id="cor3">chances of rain</h2>
+      </div>
+
+      <div class="card">
+        <h2 id="date4">date</h2>
+        <h2 id="temperature4">Temperature</h2>
+        <h2 id="Wd4">WeatherDescription</h2>
+        <img id="Wi4">
+        <h2 id="cor4">chances of rain</h2>
+      </div>
+
+      <div class="card">
+        <h2 id="date5">date</h2>
+        <h2 id="temperature5">Temperature</h2>
+        <h2 id="Wd5">precipitation</h2>
+        <img id="Wi5">
+        <h2 id="cor5">chances of rain</h2>
+      </div>
+
+      <div class="card">
+        <h2 id="date6">date</h2>
+        <h2 id="temperature6">Temperature</h2>
+        <h2 id="Wd6">WeatherDescription</h2>
+        <img id="Wi6">
+        <h2 id="cor6">chances of rain</h2>
+        
+      </div>
+    </div></div>
+
+    <!-- About -->
+    <div class="about" id="About">
+      <h1 style="color: #023047;">About</h1>
+      <p class="about-text">
+        SkyScope is a leading weather forecasting company dedicated to providing accurate, real-time, and hyper-local weather information to individuals, businesses, and industries worldwide. Combining advanced meteorological science with cutting-edge technology, we offer personalized forecasts and severe weather alerts to help our customers stay prepared and make informed decisions. Whether you’re managing an agricultural operation, planning an outdoor adventure, or optimizing business logistics, our precision-driven tools and insights are designed to meet your unique needs and ensure your safety and efficiency.
+        
+        Our mission is to revolutionize the way people access and interact with weather data. By harnessing the power of AI, big data, and machine learning, SkyScope delivers forecasts that go beyond the basics—offering minute-by-minute updates, location-specific details, and real-time alerts for severe weather events. Our team of experts is committed to pushing the boundaries of weather technology, providing businesses and individuals with the tools necessary to respond proactively to changing conditions.
+        
+        At SkyScope, we are driven by a customer-centric approach and a commitment to innovation, accuracy, and reliability. From personalized weather apps to enterprise-level forecasting solutions, we aim to make weather data more accessible and actionable for everyone. With our global reach and local expertise, SkyScope is here to empower you to navigate the unpredictable world of weather with confidence.
+        </p>
+  
+        <!-- footer -->
+        <div class="footer" id="footer">
+          <h1 style="color: #023047;">Contact us</h1>
+          <ul class="contact">
+            <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXuOAoIb3hP1oXt1p5Y6lnuBblKhGA3uMHkg&s" target="_blank" class="contacts">Terms and conditions</a></li>
+            <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RLfzGX6w2iibgbGiTl1bSY947pvCLXqxIw&s" target="_blank" class="contacts">Privacy policy</a></li>
+            <li><a href="https://www.linkedin.com/in/aashrith-vellampalli-250683332/" target="_blank" class="contacts">Linkedin</a></li>
+            <li><a href="https://x.com/Aashrit52862154"target="_blank" class="contacts">Twitter</a></li>
+            <li><a href="https://www.facebook.com/aashrith.vellampalli/" target="_blank"class="contacts">Facebook</a></li>
+            <li>phone:9988776655</li>
+            <button class="btt"><a href="#" class="backtotop">BACK TO TOP</a></button>
+          </ul>
+        </div>
+       
+
+  <script src="index.js"></script>
+</body>
+</html>
