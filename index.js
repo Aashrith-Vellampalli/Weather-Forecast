@@ -28,7 +28,7 @@ searchButton.addEventListener('click', function() {
 
 
 function updateWeatherData() {
-  var url = 'http://api.weatherapi.com/v1/current.json?key=94def430442c47ffbb8164131241312&q=' + getCityFromSearchBar() + '&aqi=no';
+  var url = 'https://api.weatherapi.com/v1/current.json?key=94def430442c47ffbb8164131241312&q=' + getCityFromSearchBar() + '&aqi=no';
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -59,7 +59,7 @@ function updateWeatherData() {
 
 function UpdateforecastweatherData(){
   city = getCityFromSearchBar();
-  var url = 'http://api.weatherapi.com/v1/forecast.json?key=94def430442c47ffbb8164131241312&q='+city+'&days=7&aqi=no&alerts=no'
+  var url = 'https://api.weatherapi.com/v1/forecast.json?key=94def430442c47ffbb8164131241312&q='+city+'&days=7&aqi=no&alerts=no'
   fetch(url)
     .then(response => response.json())
     .then(data => {
