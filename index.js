@@ -76,6 +76,10 @@ function UpdateforecastweatherData(){
         element.textContent = 'chances of rain: ' + data.forecast.forecastday[i].day.daily_chance_of_rain + '%';
       }
       })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
 
 
 }
