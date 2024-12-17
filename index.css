@@ -126,7 +126,10 @@ h1{
   padding: 25px;
   background-color: #023047;
   color:#219EBC;
-  margin:15px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-radius: 20px;
 }
 .weekly-container{
