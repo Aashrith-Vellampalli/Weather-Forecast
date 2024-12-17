@@ -109,7 +109,7 @@ h1{
 .card-container{
   display: flex;
   flex-wrap: wrap;
-  margin: 30px;
+  margin: 25px;
   justify-content: space-around;
   color:#219EBC;
 }
@@ -163,7 +163,7 @@ h1{
 .btt{
   bottom: 10px;
   right: 20px;
-  background-color: #023047;
+  background-color: transparent;
   color: #8ECAE6;
   border: none;
   padding: 10px;
@@ -173,6 +173,9 @@ h1{
 .backtotop{
   text-decoration: none;
   color: #8ECAE6;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 .weather-icon{
   width:100%;
