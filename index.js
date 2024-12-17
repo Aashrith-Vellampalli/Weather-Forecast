@@ -12,6 +12,11 @@ function getCityFromSearchBar() {
   return city;
 }
 
+const btt = document.querySelector('.backtotop');
+window.addEventListener('scroll',()=>{
+  btt.style.display= window.scrollY>50 ? 'block':'none';
+});
+
 
 var searchButton = document.querySelector('#search-bar');
 searchButton.addEventListener('keypress', function(event) {
