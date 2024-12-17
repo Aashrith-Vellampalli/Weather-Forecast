@@ -52,6 +52,7 @@ function updateWeatherData() {
         element.textContent = 'Precipitation: ' + data.current.precip_mm + 'mm';
     })
     .catch(error => {
+      console.error('Error:', error);
       alert('City not found');
     });
 }
