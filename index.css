@@ -171,6 +171,7 @@ h1{
   cursor: pointer;
 }
 .backtotop{
+  display:none;
   text-decoration: none;
   color: #8ECAE6;
   position: fixed;
